@@ -1,0 +1,78 @@
+// Black
+$df-black: #090A0B;
+$df-gray-900: #212529;
+$df-gray-800: #343A40;
+$df-gray-700: #495057;
+$df-gray-600: #6C757D;
+$df-gray-500: #ADB5BD;
+$df-gray-400: #CED4DA;
+$df-gray-300: #DEE2E6;
+$df-gray-200: #E9ECEF;
+$df-gray-100: #F8F9FA;
+$df-white: #FFFFFF;
+
+// Red
+$df-dark-red: #B80000;
+$df-red: #EB0000;
+$df-light-red: #FF3232;
+
+// Orange
+$df-dark-orange: #FF6D00;
+$df-orange: #FF8500;
+$df-light-orange: #FF9E00;
+
+// Yellow
+$df-dark-yellow: #FFDB00;
+$df-yellow: #FFED00;
+$df-light-yellow: #FFFF00;
+
+// Green
+$df-dark-green: #008A00;
+$df-green: #00DC00;
+$df-light-green: #00F400;
+
+// Blue
+$df-dark-blue: #11119C;
+$df-blue: #0045F7;
+$df-light-blue: #0AD6FF;
+
+// Purple
+$df-dark-purple: #520069;
+$df-purple: #80189A;
+$df-light-purple: #9D4EDD;
+
+// Pink
+$df-dark-pink: #C40065;
+$df-pink: #F80080;
+$df-light-pink: #F000F7;
+
+$df-gray: #f9f9fb;
+$df-line-gray: #dfdfdf;
+$df-bg-gray: #e8e8e8;
+$df-text-gray: #8E8E95;
+$df-dark-bg-color: #100f1e;
+$df-selected-bg-color: #e6f1ff;
+
+$primary-color: $df-blue;
+$link-color: $primary-color;
+$info-color: $df-dark-blue;
+$success-color: $df-dark-green;
+$warning-color: $df-dark-orange;
+$error-color: $df-dark-red;
+$highlight-color: $df-dark-red;
+
+
+$font-size-base: 14px;
+$font-size-lg: $font-size-base + 2px;
+$font-size-sm: 12px;
+
+$heading-1-size: ceil($font-size-base * 2.71);
+$heading-2-size: ceil($font-size-base * 2.14);
+$heading-3-size: ceil($font-size-base * 1.71);
+$heading-4-size: ceil($font-size-base * 1.42);
+$heading-5-size: ceil($font-size-base * 1.14);
+
+$line-height-base: 1.5715;
+
+$border-radius-scrollbar: '8px';
+

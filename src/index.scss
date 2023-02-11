@@ -1,0 +1,125 @@
+@import "./assets/scss/variable.scss";
+
+@font-face {
+    font-family: 'klavika-bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/klavika-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'klavika-light';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/klavika-light-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'klavika-medium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/klavika-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'klavika-regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/klavika-regular-webfont.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    #video-ctn::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background: $df-gray-900;
+        border: 1px solid $df-gray-900;
+    }
+
+    #video-ctn::-webkit-scrollbar-corner {
+        background: $df-gray-900;
+    }
+
+    #video-ctn::-webkit-scrollbar-track {
+        background: $df-gray-900;
+        border-radius: $border-radius-scrollbar;
+        box-shadow: none !important;
+    }
+
+    #video-ctn::-webkit-scrollbar-thumb {
+        background: $df-gray-600;
+        border-radius: $border-radius-scrollbar;
+    }
+}
+
+#root {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+
+    #page-loader {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.85);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .loader {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            // background-color: #00DC00;
+            
+            .loading-image {
+                width: 120px;
+                height: 120px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                background-image: url('./assets/images/monk.png');
+                margin-bottom: 50px;
+            }
+            .loading-text {
+                width: fit-content;
+                height: 20px;
+                color: $df-white;
+                white-space: nowrap;
+
+                span {
+                    font-family: 'klavika-regular';
+                    font-size: $font-size-base;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    #page-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow-x: auto;
+        overflow-y: auto;
+
+        .page {
+            position: relative;
+            min-width: 100%;
+            min-height: 100%;    
+        }
+    }
+}
+
+

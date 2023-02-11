@@ -12,9 +12,9 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 
 
 const config = {
-    entry: './src/index.ts',
+    entry: './src/App.ts',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
     },
     devServer: {
         open: true,
@@ -23,6 +23,7 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html',
+            favicon: './src/assets/favicon.ico',
         }),
 
         new MiniCssExtractPlugin(),
@@ -42,7 +43,7 @@ const config = {
                 use: [stylesHandler, 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+                test: /\.(eot|png|jpg|gif|svg|ico|ttf|woff|woff2)$/i,
                 type: 'asset',
             },
 
@@ -51,7 +52,7 @@ const config = {
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
+        extensions: [ '.ts', '.js', '...'],
     },
 };
 
