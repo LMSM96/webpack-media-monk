@@ -1,15 +1,13 @@
-# 🚀 Welcome to your new awesome project!
+## Steps to run
 
-This project has been created using **webpack-cli**, you can now run
-
+- install nodeJS
+- clone repo
+- run
 ```
-npm run build
+npm install
 ```
-
-or
-
 ```
-yarn build
+npm run serve
 ```
 
-to bundle your application
+

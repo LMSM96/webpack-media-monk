@@ -61,14 +61,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 0px;
+width: 0px;
     height: 0px;
 
     #page-loader {
         position: relative;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: $df-black;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -88,21 +88,118 @@
                 background-position: center;
                 background-size: contain;
                 background-image: url('./assets/images/monk.png');
-                margin-bottom: 50px;
+                margin-bottom: 20px;
+                transform: translateY(0) scaleX(1) scaleY(0.9);
+                animation: 1.3s ease-in 0s loaderImgIn, 2s linear 1.3s infinite loaderImgUpDown;
             }
             .loading-text {
                 width: fit-content;
                 height: 20px;
                 color: $df-white;
-                white-space: nowrap;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                animation: 0.4s ease-in 0s loaderTextStart, 0.4s ease-in-out 0.4s loaderTextEnd;
+                transition: all 1s linear;
+                overflow-x: hidden;
+                overflow-y: hidden;
 
                 span {
                     font-family: 'klavika-regular';
-                    font-size: $font-size-base;
+                    font-size: $font-size-base+4px;
                     font-style: italic;
+                    transition: all 1s linear;
+                    background-color: $df-black;
+                    z-index: 10;
+                
+                    &:nth-child(2) {
+                        text-align: right;
+                        width: 140px;
+                        animation: 1.5s linear 0s loaderTextStart2, .2s linear 1.4s loaderTextEnd2;
+                        z-index: 1;
+                    }
                 }
             }
         }
+
+        @keyframes loaderImgIn {
+            0%{
+                transform: translateY(0) scaleX(0) scaleY(0);
+            }
+            40%{
+                transform: translateY(-10px) scaleX(1) scaleY(0.95);
+            }
+            50%{
+                transform: translateY(5px) scaleX(1) scaleY(0.9);
+            }
+            80%{
+                transform: translateY(-5px) scaleX(1) scaleY(0.95);
+            }
+            100%{
+                transform: translateY(0) scaleX(1) scaleY(0.9);
+            }
+        }
+        @keyframes loaderImgUpDown {
+            0%{
+                transform: translateY(0) scaleX(1) scaleY(0.9);
+            }
+            60%{
+                transform: translateY(-10px) scaleX(1) scaleY(0.94);
+            }
+            100%{
+                transform: translateY(0) scaleX(1) scaleY(0.9);
+            }
+        }
+
+        @keyframes loaderTextStart {
+            0%{
+                transform: scale(0);
+            }
+            100%{
+                transform: scale(0);
+            }
+        }
+        @keyframes loaderTextEnd {
+            0%{
+                transform: scale(0);
+            }
+            50%{
+                transform: scale(1.3);
+            }
+            70%{
+                transform: scale(1);
+            }
+            90%{
+                transform: scale(1.1);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+
+        @keyframes loaderTextStart2 {
+            0%{
+                width: 0; opacity: 0; transform: translateX(-140px); 
+            }
+            80%{
+                width: 0; opacity: 0; transform: translateX(-140px);
+            }
+            100%{
+                width: 140px; opacity: 0; transform: translateX(-140px);
+            }
+        }
+        @keyframes loaderTextEnd2 {
+            0%{
+                opacity: 0; transform: translateX(-140px);
+            }
+            10%{
+                opacity: 0; transform: translateX(-140px);
+            }
+            100%{
+                opacity: 1; transform: translateX(0);
+            }
+        }
+
     }
 
     #page-container {
